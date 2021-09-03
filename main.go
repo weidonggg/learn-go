@@ -28,6 +28,7 @@ func webhook(w http.ResponseWriter, r *http.Request) {
 
 	r.Body.Read(buf)
 
+	fmt.Println(r.Header)
 	fmt.Println(string(buf))
 
 	io.WriteString(w, "ok")
